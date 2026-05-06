@@ -1,0 +1,683 @@
+/* =========================
+   GLOBAL STYLES
+========================= */
+
+input, select, textarea {
+    font-family: "EB Garamond", sans-serif;
+    font-size: 1rem;
+    height: 40px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "EB Garamond", sans-serif;
+    background-image: url("../imgs/map_bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /*Remove to stop background scroll*/
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Content container */
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.site-header {
+    background-color: #000000;
+    padding: 15px 0;
+    font-family: "Cinzel Decorative";
+    font-size: 20px;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    width: 110px;
+}
+
+/* =========================
+   NAVIGATION
+========================= */
+
+.main-nav ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: #c59432;
+}
+
+.main-nav a:hover {
+    color: #ffd966;
+}
+
+/* =========================
+   SECTION LABEL
+========================= */
+
+.section-label {
+    grid-column: 1 / -1;
+    margin-top: 20px;
+    color: #000000;
+    border-bottom: 2px solid #000000;
+    padding-bottom: 5px;
+    font-family: "Cinzel Decorative";
+}
+
+/* =========================
+   LOCATION HEADER
+========================= */
+
+.location-header {
+    margin-top: 30px;
+    padding: 30px;
+    background-color: #343434;
+    color: #c59432;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.location-header h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    text-align: center;
+    color: #c59432;
+}
+
+.location-header p {
+    font-family: sans-serif;
+    font-size: 1rem;
+    opacity: 0.9;
+    text-align: center;
+    color: #c59432;
+}
+
+/* =========================
+   LOGIN PAGE
+========================= */
+
+.login-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 30px;
+    border: 1px solid #575757;
+    border-radius: 8px;
+    background-color: #343434;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-family: "Cinzel Decorative";
+}
+
+.login-container h1 {
+    text-align: center;
+    color: #c59432;
+    margin-bottom: 20px;
+}
+
+.login-form .form-group {
+    margin-bottom: 15px;
+}
+
+.login-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-family: "EB Garamond", sans-serif;
+    font-size: 20px;
+    color: #c59432;
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #575757;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.login-form .submit-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #c59432;
+    color: #343434;
+    font-size: 24px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: "EB Garamond", sans-serif;
+}
+
+.login-form .submit-btn:hover {
+    background-color: #ffd966;
+}
+
+.register-link {
+    color: red;
+}
+
+.center {
+    text-align: center;
+}
+
+.animate-bottom {
+    position: relative;
+    animation: animatebottom 0.5s;
+}
+
+@keyframes animatebottom {
+    from {
+        bottom: -50px;
+        opacity: 0;
+    }
+    to {
+        bottom: 0;
+        opacity: 1;
+    }
+}
+
+/* =========================
+   CHARACTERS PAGE
+========================= */
+
+.toy-details-page {
+    padding: 2rem 1rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.toy-details-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* Character Image */
+.toy-image img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+    object-fit: cover;
+}
+
+/* Back Button Form */
+.toy-details-container > form button {
+    padding: 10px;
+    background-color: #343434;
+    color: #c59432;
+    font-size: 24px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: "EB Garamond", sans-serif;
+}
+
+.toy-details-container > form button:hover {
+    background-color: #575757;
+}
+
+/* Details Form */
+.toy-details {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.toy-details h1 {
+    margin: 0 0 0.5rem;
+    font-size: 3.6rem;
+}
+
+.toy-details h3 {
+    margin: 0.5rem 0 0.25rem;
+    font-size: 2.2rem;
+    border-bottom: 1px solid #c59432;
+    padding-bottom: 0.25rem;
+}
+
+.toy-details label {
+    font-weight: 600;
+    font-size: 1.8rem;
+    margin-bottom: -0.5rem;
+}
+
+.toy-details input[type="text"],
+.toy-details input[type="number"] {
+    padding: 0.4rem 0.6rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 2rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.toy-details input[type="text"]:focus,
+.toy-details input[type="number"]:focus {
+    outline: none;
+    border-color: #666;
+}
+
+.toy-details p {
+    margin: 0.1rem 0;
+    font-size: 1.9rem;
+}
+
+/* Save Button */
+.toy-details > button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #c59432;
+    color: #343434;
+    font-size: 24px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: "EB Garamond", sans-serif;
+}
+
+.toy-details > button[type="submit"]:hover {
+    background-color: #ffd966;
+}
+
+/* Section headings for GM/Player/Creature/NPC blocks */
+.toy-details br + h3 {
+    margin-top: 1rem;
+}
+
+/* =========================
+   PROFILE PAGE
+========================= */
+
+.profile-page h1 {
+    text-align: center;
+    color: #6191be;
+    margin-bottom: 20px;
+}
+
+.orders-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.order-card {
+    flex: 0 0 calc(50% - 20px);
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    transition: transform 0.3s ease;
+}
+
+.order-card:hover {
+    transform: scale(1.05);
+}
+
+.order-card img {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.order-info p {
+    margin: 5px 0;
+    font-family: sans-serif;
+    color: #555;
+}
+
+.order-info strong {
+    margin: 5px 0;
+    color: #000000;
+}
+
+.no-orders {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 1.2rem;
+    color: #555;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.site-footer {
+    margin-top: auto;
+    padding: 20px 0;
+    background-color: #000000;
+    text-align: center;
+}
+
+.site-footer p {
+    color: #c59432;
+}
+
+/* =========================
+DASHBOARD
+========================= */
+
+.toy-catalog {
+    max-width: 1100px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.toy-catalog .section-label {
+    font-size: 1.6rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid #343434;
+    padding-bottom: 0.5rem;
+}
+
+/* Card Grid */
+.toy-card {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    background: none;
+    border: 1px solid #343434;
+    border-radius: 8px;
+    padding: 1rem;
+    cursor: pointer;
+    text-align: center;
+    vertical-align: top;
+    width: 220px;
+    margin: 0.5rem;
+    transition:
+        box-shadow 0.2s,
+        transform 0.2s;
+}
+
+.toy-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    transform: translateY(-2px);
+}
+
+/* Card Image Button */
+.toy-card button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    width: 100%;
+}
+
+.toy-card button img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 6px;
+    display: block;
+}
+
+/* Card Title */
+.toy-card h2 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0;
+    word-break: break-word;
+}
+
+/* =========================
+    LOCATION
+========================= */
+
+/* Section label add button */
+.section-label > button {
+    font-size: 0.8rem;
+    padding: 0.25rem 0.7rem;
+    background-color: #343434;
+    color: #c59432;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: "EB Garamond", sans-serif;
+}
+
+.section-label > button:hover {
+    background-color: #575757;
+}
+
+/* Inline add form */
+.section-label form {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 0.5rem;
+}
+
+.section-label form input[type="text"] {
+    padding: 0.4rem 0.6rem;
+    border: 1px solid #343434;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: "EB Garamond", sans-serif;
+    background-color: #fff;
+    flex: 1;
+    min-width: 120px;
+}
+
+.section-label form input[type="text"]:focus {
+    outline: none;
+    border-color: #c59432;
+}
+
+.section-label form button[type="submit"] {
+    padding: 0.4rem 1rem;
+    background-color: #c59432;
+    color: #343434;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: "EB Garamond", sans-serif;
+    cursor: pointer;
+}
+
+.section-label form button[type="submit"]:hover {
+    background-color: #ffd966;
+}
+
+.section-label form button[type="button"] {
+    padding: 0.4rem 1rem;
+    background-color: #343434;
+    color: #c59432;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: "EB Garamond", sans-serif;
+    cursor: pointer;
+}
+
+.section-label form button[type="button"]:hover {
+    background-color: #343434;
+}
+
+/* Location header form inputs */
+.location-header form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    margin-top: 1rem;
+}
+
+.location-header label {
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: #c59432;
+    font-family: "Cinzel Decorative";
+    text-align: right;
+    width: 200px;
+    flex-shrink: 0;
+}
+
+.location-header input[type="text"] {
+    padding: 0.4rem 0.6rem;
+    border: 1px solid #343434;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: "EB Garamond", sans-serif;
+    width: 60%;
+    box-sizing: border-box;
+}
+
+.location-header input[type="text"]:focus {
+    outline: none;
+    border-color: #343434;
+}
+
+.location-header input[disabled] {
+    background: #e8e8e8;
+    color: #888;
+    cursor: not-allowed;
+}
+
+.location-header button[type="submit"] {
+    align-self: flex-start;
+    padding: 6px 20px;
+    background-color: #c59432;
+    color: #343434;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: "EB Garamond", sans-serif;
+}
+
+.location-header button[type="submit"]:hover {
+    background-color: #ffd966;
+}
+
+/* Toggle visibility button on cards */
+.toy-card > form button[type="submit"] {
+    padding: 0.3rem 0.75rem;
+    background-color: #343434;
+    color: #c59432;
+    border: none;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-family: "EB Garamond", sans-serif;
+    cursor: pointer;
+    width: 100%;
+}
+
+.toy-card > form button[type="submit"]:hover {
+    background-color: #343434;
+}
+
+/* Card text */
+.toy-card p {
+    font-size: 0.85rem;
+    color: #343434;
+    margin: 0;
+}
+
+/* =========================
+    PROPS
+========================= */
+
+.form-row {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    width: 100%;
+}
+
+.form-row label {
+    width: 180px;
+    flex-shrink: 0;
+    text-align: right;
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+/* Tablet */
+
+@media (max-width: 1000px) {
+    .toy-catalog {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Small tablet */
+
+@media (max-width: 750px) {
+    .toy-catalog {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .toy-details-container {
+        flex-direction: column;
+    }
+
+    .toy-card img {
+        height: auto;
+        max-height: 250px;
+        object-fit: contain;
+    }
+}
+
+/* Mobile */
+
+@media (max-width: 500px) {
+    .header-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .main-nav ul {
+        gap: 15px;
+    }
+
+    .toy-catalog {
+        grid-template-columns: 1fr;
+    }
+
+    .toy-card img {
+        height: auto;
+        max-height: 200px;
+        object-fit: contain;
+    }
+
+    .login-container {
+        padding: 20px;
+        margin: 20px;
+    }
+
+    .orders-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .order-card {
+        width: 90%;
+    }
+}
